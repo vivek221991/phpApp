@@ -1,0 +1,222 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+   font-family: 'Morningtype';
+      src: url('fonts/Morningtype.eot');
+      src: url('fonts/Morningtype.eot?#iefix') format('embedded-opentype'),
+           url('fonts/Morningtype.woff') format('woff'),
+           url('fonts/Morningtype.ttf') format('truetype'),
+           url('fonts/Morningtype.svg#BentonRegular') format('svg');
+}
+body										{ font-family:tahoma ; margin:0px; padding:0px; font-family:tahoma; font-size:12px; background:#ffffff url(../images/bg_New.png) repeat; }
+.IconsBG									{ position:absolute; top:80px; left:-92px; width:107px; height:604px; }
+.IconsBG_1									{ right:0px; left:1152px; }
+
+
+/*admin css*/
+
+.AdminHeader							{ background-color: #076a93; min-height:60px; }
+
+.AdminContentOuter						{   background-color: #f2f2f2;
+    border: 1px solid #cccccc;
+    float: left;
+    margin: auto 0;
+    padding: 5px;
+    width: 1000px; }
+.CategorySection						{ width:99%; padding: 5px; }
+.CategorySection label					{ text-transform:capitalize; min-width:100px; float:left; margin:5px; }
+.TxtBox									{ background-color:#ffffff; border:1px solid #cccccc; width:200px; float:left; margin:5px; }
+.SubmitBtn								{ background-color:#2b9d0c; padding:4px; border:0px; color:#ffffff; font-size:12px; cursor:pointer; float:right }
+.AdminHeading							{     background-color: #2b9d0c;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: #ffffff;
+    float: left;
+    padding: 5px;
+    text-align: center;
+    width: 10%; margin-top:10px; }
+/*-----*/
+input										{ outline:none; }
+.NavBgRemove								{ background-color:#886f4d; border:none; position:relative }
+.MenuBG										{ background:#886f4d; position:relative; }
+.LogoPadding								{ padding: 11px 20px; }
+.SearchKey										{ border:none; border-radius:5px; margin: 10px 0 10px 5px; padding: 5px; 
+										      width: 97%; background:#ffffff; }
+.
+.HeaderIcons a								{ padding:14px 10px !important; }
+.HeaderIcons img								{ cursor:pointer; }
+.SignInBtn									{ background-color:#7e05ba; padding:3px 10px; border-radius:5px; border:0px; color:#ffffff; font-size:14px; 
+											  margin-top:11px;  }
+.HeaderIcons								{ float:right !important; margin-right:15px; }
+
+
+.hvr-sweep-to-bottom 						{ display: inline-block; vertical-align: middle; -webkit-transform: translateZ(0); transform: translateZ(0);
+											  -webkit-backface-visibility: hidden; backface-visibility: hidden; -moz-osx-font-smoothing: grayscale;
+											  position: relative; -webkit-transition-property: color; transition-property: color; 			
+											  webkit-transition-duration: 0.3s; transition-duration: 0.3s; }
+.hvr-sweep-to-bottom:before 				{ content: "";  position: absolute; z-index: -1; top: 0; left: 0; right: 0; bottom: 0; background: #7e05ba;
+											  -webkit-transform: scaleY(0); transform: scaleY(0); -webkit-transform-origin: 50% 0;
+											   transform-origin: 50% 0; -webkit-transition-property: transform; transition-property: transform;
+											  -webkit-transition-duration: 0.3s; transition-duration: 0.3s; -webkit-transition-timing-function: ease-out;
+											  transition-timing-function: ease-out; }
+.hvr-sweep-to-bottom:hover, 
+.hvr-sweep-to-bottom:focus, 
+.hvr-sweep-to-bottom:active 				{ color: white; }
+
+.hvr-sweep-to-bottom:hover:before, 
+.hvr-sweep-to-bottom:focus:before, 
+.hvr-sweep-to-bottom:active:before 			{ -webkit-transform: scaleY(1); transform: scaleY(1); }
+
+.AdOuter									{ width:100%; background-color:#f2f2f2; border:1px solid #cccccc; padding:5px 5px 28px; border-radius:5px; position:relative; height:250px; }
+.AdOuter label								{ position:absolute; bottom:0px; font-weight:normal }
+.CategoryHighlight							{ background-color:#7e05ba }
+.GridOuter									{ float:left; width:100%; }		
+.AdOuter img:first-child					{ width:100%; height:100%; }	
+.AdOuter img									{ cursor:pointer; }
+.OverlayOuter img							{ width:auto !important; height:auto !important; float:right; margin:0 3px; }	
+.OverlayOuter								{ width:100%; background:url(../images/overlay_BG.png) repeat; border-top-left-radius:5px; 
+											  border-top-right-radius:5px;  left: 0; position: absolute; top: 0; padding:5px 0px 5px 5px; }							  
+.FavIcon									{ cursor:pointer; }
+/*.FavIcon									{ background:url(../images/fav_Icon.png) no-repeat; width:20px; height:17px; }
+.FavIcon:hover								{ background:url(../images/fav_Icon_hover.png) no-repeat; width:20px; height:17px; } */
+.col-sm-4									{ margin-bottom:10px; }
+.Footer										{ width:100%; background-color:#333333; color:#ffffff; padding:8px 0px; }				 							
+.Footer label								{ font-weight:normal; letter-spacing:1px; font-size:11px }  
+.Footer label a								{ color:#ffffff; }
+.FollowUsOtr								{ float: right; margin-top: 6px; }
+.FollowUsOtr span							{ margin-right: 5px; }
+.FollowUsOtr img							{ margin-left:5px; }
+.CtegoryList								{ border-radius: 5px; color: #cccccc; font-size: 14px; height: 40px; margin: 5px; min-width: 117px;
+    										  padding: 8px; text-align: left; width: auto; cursor:pointer; }
+.CtegoryList img							{ float:left; margin-right:5px;     width: 20px; height: 20px; display: block; }
+.CtegoryList a								{ color:#ffffff; text-decoration:none; }
+#popupdiv img								{ width:100%; height:100%; }
+.Close										{     margin: 0px;
+    padding: 0px;
+    width: 27px;
+    text-align: center;
+    position: absolute;
+    right: -12px;
+    top: -10px;
+    background-color: #7e05ba;
+    color: #ffffff;
+    border-radius: 30px;
+    font-size: 16px;
+	cursor:pointer;
+    height: 27px;
+    line-height: 23px; }
+
+.Jewellery									{ background-color:#7e05ba; }
+.Food										{ background-color:#6aa712; }
+.Cinema										{ background-color:#e1443c; }
+.Electronics								{ background-color:#5e50e6; }
+.Beauty										{ background-color:#c92481; }
+.Pubs										{ background-color:#110e92; }
+.Automobiles								{ background-color:#ff6600; }
+.Hypermarket								{ background-color:#1f6229; }
+.Supermarket								{ background-color:#1bca1b; }
+.ShoppingMalls								{ background-color:#12a9a4; }
+.Pizza										{ background-color:#f3b92d; }
+.bakery										{ background-color:#bace0f; }
+.RealEstate									{ background-color:#0bc3a2; }
+.Optical									{ background-color:#cbb51f; }
+.Bank										{ background-color:#2ea3aa; }
+.Cabs										{ background-color:#e0d913; }
+.EventOrganiser								{ background-color:#db9205; }
+.CategoryHeading							{ margin-bottom: 10px; padding: 5px 10px; border-radius: 5px; color: #ffffff; font-size: 19px; 
+											  width: 100%; margin-left: 6px; }
+.CategoryBorder								{ margin-bottom: 20px; padding-bottom: 10px; background-color: #7e05ba; border-radius: 5px; }
+.CategoryBorder img							{ float: left; margin-top: 7px; background:none !important; }
+.CategoryBorder span							{ color: #ffffff !important; margin-left: 5px;margin-top: 3px;float: left;font-size: 17px; background:none  !important; }
+.AdOuter form									{ background:url(../images/trans_BG.png) repeat; border:1px solid #076a93; padding:5px; position:absolute; top: 33px; right: 10px; }
+.AdOuter form input[type=text],
+.SigninPopup input[type=text]					{ padding:5px; background-color:#ffffff; border:1px solid #076a93; min-width:200px; float:left }
+.EmailTxtField								{ float: left; min-width: 200px; height: 31px; padding-left: 5px; }
+.SubmitBtn									{ background-color: #2b9d0c; color: #ffffff; font-size: 15px; border: none; padding: 5px; float: left; }
+
+/*Final CSS */
+
+.AdOuter form								{ position: absolute; top: 40px; right: 0px; padding: 5px; background:url(../images/trans_BG.png) repeat; border:1px solid #076a93;  }
+.SearchKey									{ width: 81%; margin-top: 10px; border: 1px solid #cccccc; padding-left: 5px; border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;  float: left;
+ }
+.SearchBtn									{ 
+    background-color: #7e05ba;
+    color: #ffffff;
+    border: none;
+    height: 30px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px; 
+    float: left;
+    margin-top: 10px;
+    height: 32px;
+	padding: 0 13px;
+
+ }
+ .EmailID				{ margin-top: 15px;  color: #ffffff;  float: right; }
+ .SigninPopup			{ 
+    position: absolute;
+    width: 267px;
+    right: 0px;
+	padding: 5px; background:url(../images/trans_BG.png) repeat;
+	border:1px solid #076a93;
+ }
+ #popupdiv					{ width: 500px; height: 400px; position: absolute; display: none; top: 70px;background-color: #ffffff;
+    box-shadow: 0px 3px 5px 8px #999999;
+    border-radius: 5px; left: 30%; }
+#popupdiv div:first-child	{ 
+    width: 100% !important;
+    margin-top: 10px !important;
+    height: 95% !important;
+ }
+ #popupdiv div img		{ height:100%; }
+ #popupdiv .OverlayOuter	{ display:none; }
+ .ContainerHeight	{ min-height:600px; }
+ .FavHeader			{  }
+ .ReminderOuter		{ width: 320px;
+    background-color: #076a93;
+    padding: 5px;
+    position: absolute;
+    right: 16%;
+    z-index: 99999;
+	top:54px;
+	color:#ffffff;
+     }
+	 .ReminderOuter .NavBgRemove	{ display:none; }
+ .AdOuterReminder			{ width:100%;     float: left;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 5px;
+    margin-bottom: 10px; }
+ .AdOuterReminder img		{ 
+    float: left;
+    height: 50px;
+    margin: 3px;
+ }
+ .AdOuterReminder span	{
+    font-size: 12px;
+    color: #ffffff;
+    float: left;
+    margin-left: 10px;
+	margin-right:10px;
+	line-height:18px;
+}
+
+											  
+@media only screen and (min-width:800px) and (max-width: 1500px)  {
+	
+.SearchTextBox							{ width: 81%; float:right }	
+.SearchTextBox01						{ width:40%; margin-left:70px; }
+	
+}
+
+@media only screen and (min-width:200px) and (max-width: 600px)  {
+	
+.Width320						{  margin-bottom: 10px; padding-left: 5px; padding-right: 0; width: 49% !important; }
+.Width320 label					{ float: left; font-size: 10px; left: 0 !important; margin: 0; position: relative; width: 100%; line-height:14px; }
+.Width320 label:first-child		{ border-bottom:1px solid #cccccc; left:0px !important; }
+.FollowUsOtr					{ width:100%; }
+.CtegoryList					{ min-width: 145px; }
+.CategoryHeading				{ width:96%; }	
+
+}
