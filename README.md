@@ -1,11 +1,18 @@
 # phpApp
 points to run the project in your machine.
 
-1.> install xampp latest version.
-2.> keep the downloaded pamphlet folder in C:\xampp\htdocs\
-3.> open the php.ini file to replace/Add ;extension=php_mysqli.dll with extension=php_mysqli.dll;
-4.> start the xampp control panel and start the mysql and apache.
-5.> create database pamphlet in mysql by opening http://localhost/phpmyadmin/;
-6.> select pamphlet DB name and import pamphlet.sql.zip file from project.
-7.> open http://localhost/pamphlet/admin.php to add the category and subcategory information;
-8.> open http://localhost/pamphlet/pamphlet.php to launch the application
+Install xampp latest version.   
+
+Keep the downloaded pamphlet folder in C:\xampp\htdocs\
+
+Open the php.ini file to replace/Add ;extension=php_mysqli.dll with extension=php_mysqli.dll;
+
+Start the xampp control panel and start the mysql and apache.
+
+Create database pamphlet in mysql by opening http://localhost/phpmyadmin/;
+
+Select pamphlet DB name and import pamphlet.sql.zip file from project.
+
+Open http://localhost/pamphlet/admin.php to add the category and subcategory information;
+
+Open http://localhost/pamphlet/pamphlet.php to launch the application
