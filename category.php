@@ -7,7 +7,7 @@
     <div class="container CategoryBorder" style="background:none">
     	<div class="row">
 		 <?php
-		  while($row=mysql_fetch_array($categoryName)){
+		  while($row=mysqli_fetch_array($categoryName)){
           echo '<div class="col-xs-1 col-sm-1 CtegoryList Jewellery iconf" id="' . $row['catid'] . '">';
 		  echo '<img   src="data:image/png;base64,'.base64_encode( $row['catimage'] ).'"  width="18" height="26"/>';
           echo	'<span>' . $row['catname'].'</span>';

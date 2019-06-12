@@ -21,9 +21,9 @@
 		<?php
 		include 'usersession.php';
 		//echo $userLoginId;
-$pinnedItem=mysql_query("SELECT b.catid,b.subcatname,b.expireDate,b.subcatimage FROM pinnedcat a,subcategory b WHERE b.catid=a.pincatid and a.pinneduser=$userLoginId");
+$pinnedItem=mysqli_query($conn,"SELECT b.catid,b.subcatname,b.expireDate,b.subcatimage FROM pinnedcat a,subcategory b WHERE b.catid=a.pincatid and a.pinneduser=$userLoginId");
 		if($pinnedItem){
-		while($row=mysql_fetch_array($pinnedItem)){		
+		while($row=mysqli_fetch_array($pinnedItem)){		
 			echo '<div class="col-sm-4 col-xs-4 Width320">';
           	echo '<div class="AdOuter">';
            	 echo '<img  src="data:image/png;base64,'.base64_encode( $row['subcatimage'] ).'"  width="308" height="300"/>';

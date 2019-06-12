@@ -47,7 +47,7 @@ include 'index.php';
 <label for="adName">Select Category:</label>
 			<Select name='catid'  class='subCatName TxtBox'>
 				<?php
-				while($row=mysql_fetch_array($categoryName)){
+				while($row=mysqli_fetch_array($categoryName)){
 			
 			echo '<option value="'. $row['catid'] .'">' . $row['catname'].'</option>'; 
 		}

@@ -6,18 +6,18 @@
 	$dbname = "pamphlet";
 
 	// Create connection
-	$conn = mysql_connect($servername, $username, $password);
+	$conn = mysqli_connect($servername, $username, $password);
 
-	mysql_select_db($dbname);
+	mysqli_select_db($conn,$dbname);
 	
 	$catname = $_POST['catname'];
-	$imagename=mysql_real_escape_string($_FILES["image"]["name"]);
-	$imagedata=mysql_real_escape_string(file_get_contents($_FILES["image"]["tmp_name"]));
-	$imageType=mysql_real_escape_string($_FILES["image"]["type"]);
+	$imagename=mysqli_real_escape_string($conn,$_FILES["image"]["name"]);
+	$imagedata=mysqli_real_escape_string($conn,file_get_contents($_FILES["image"]["tmp_name"]));
+	$imageType=mysqli_real_escape_string($conn,$_FILES["image"]["type"]);
 
 	if(substr($imageType,0,5)== "image"){
 		
-		mysql_query("insert into category values('','$imagedata','$catname')");
+		mysqli_query($conn,"insert into category values('','$imagedata','$catname')");
 		//echo "image uploaded sucess";
 		header('Location: admin.php');
 	}

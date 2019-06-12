@@ -5,8 +5,8 @@ $servername = "localhost";
 	$dbname = "pamphlet";
 
 	// Create connection
-	$conn = mysql_connect($servername, $username, $password);
-	mysql_select_db($dbname);
+	$conn = mysqli_connect($servername, $username, $password);
+	mysqli_select_db($conn,$dbname);
 	session_start(); // Starting Session
 //	$error=''; // Variable To Store Error Message
 	if (isset($_POST['submit'])) {
@@ -19,8 +19,8 @@ $servername = "localhost";
 			$mailid=$_POST['mailid'];
 			//echo $mailid;
 			//check user exitsted or not
-			$usermailId = mysql_query("select * from userlogin where usermailid='$mailid'");
-			$rows = mysql_num_rows($usermailId);
+			$usermailId = mysqli_query($conn,"select * from userlogin where usermailid='$mailid'");
+			$rows = mysqli_num_rows($usermailId);
 				//$userLoginId=$row['userid'];
 			if ($rows == 1) {
 				
@@ -28,7 +28,7 @@ $servername = "localhost";
 				header("location: pamphlet.php"); // Redirecting To Other Page
 			} else {
 				//$error = "mailId is invalid";
-				$userinfo=mysql_query("insert into  userlogin values('','$mailid')");
+				$userinfo=mysqli_query($conn,"insert into  userlogin values('','$mailid')");
 				$_SESSION['login_user']=$mailid;
 				header("location: pamphlet.php");
 			}	

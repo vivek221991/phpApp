@@ -19,10 +19,10 @@
 		<?php
 		include 'usersession.php';
 		
-		$favlist=mysql_query("SELECT b.subcatid, b.subcatname, b.expireDate,b.subcatimage FROM 
+		$favlist=mysqli_query($conn,"SELECT b.subcatid, b.subcatname, b.expireDate,b.subcatimage FROM 
 		userinfo a, subcategory b WHERE a.favid = b.subcatid and a.userid=$userLoginId");
 		if($favlist){
-		while($row=mysql_fetch_array($favlist)){		
+		while($row=mysqli_fetch_array($favlist)){		
 			echo '<div class="col-sm-4 col-xs-4 Width320">';
           	echo '<div class="AdOuter">';
            	 echo '<img  src="data:image/png;base64,'.base64_encode( $row['subcatimage'] ).'"  width="308" height="300"/>';

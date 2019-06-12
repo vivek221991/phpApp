@@ -6,8 +6,8 @@
 	$dbname = "pamphlet";
 
 	// Create connection
-	$conn = mysql_connect($servername, $username, $password);
-	mysql_select_db($dbname);
+	$conn = mysqli_connect($servername, $username, $password);
+	mysqli_select_db($conn,$dbname);
   //if(isset($_POST['search']))
 	/*if (isset($_POST['search'])) {
 		if (empty($_POST['searchItem']) ) {
@@ -38,8 +38,8 @@
 		if(preg_match("/^[  a-zA-Z]+/", $_POST['SearchKey'])){ 
 			$name=$_POST['SearchKey']; 
 			$sql="SELECT  *FROM subcategory WHERE subcatname LIKE '%" . $name .  "%'"; 
-			$result=mysql_query($sql); 
-			while($row=mysql_fetch_array($result)){ 
+			$result=mysqli_query($conn,$sql); 
+			while($row=mysqli_fetch_array($result)){ 
 				   echo '<div class="col-sm-4 col-xs-4 Width320">';
 					echo '<div class="AdOuter">';
 					echo '<img src="data:image/png;base64,'.base64_encode( $row['subcatimage'] ).'"  width="308" height="165" alt=""/>';
@@ -50,8 +50,8 @@
 			} 
 			//categorey search itemes			
 			$searchCat="SELECT  *FROM category WHERE catname LIKE '%" . $name .  "%'"; 
-			$result=mysql_query($searchCat); 
-			while($row=mysql_fetch_array($result)){ 
+			$result=mysqli_query($conn,$searchCat); 
+			while($row=mysqli_fetch_array($result)){ 
 				   echo '<div class="col-sm-4 col-xs-4 Width320">';
 					echo '<div class="AdOuter">';
 					echo '<img src="data:image/png;base64,'.base64_encode( $row['catimage'] ).'"  width="308" height="165" alt=""/>';

@@ -5,19 +5,19 @@ $servername = "localhost";
 	$dbname = "pamphlet";
 
 	// Create connection
-	$conn = mysql_connect($servername, $username, $password);
-	mysql_select_db($dbname);
+	$conn = mysqli_connect($servername, $username, $password);
+	mysqli_select_db($conn,$dbname);
 //session_start();// Starting Session
 // Storing Session
 
 if(isset($_SESSION['login_user'])){
 	$user_check=$_SESSION['login_user'];
-	//echo $user_check;
 	// SQL Query To Fetch Complete Information Of User
-	$ses_sql=mysql_query("select * from userlogin where usermailid='$user_check'");
-	$row = mysql_fetch_assoc($ses_sql);
+	$ses_sql=mysqli_query($conn,"select * from userlogin where usermailid='$user_check'");
+	$row = mysqli_fetch_assoc($ses_sql);
 	$login_session =$row['usermailid'];
 	$userLoginId=$row['userid'];
+	
 }else{
 	$login_session ='';
 	$userLoginId='';

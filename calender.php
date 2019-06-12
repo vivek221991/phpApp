@@ -5,8 +5,8 @@
 	$password = "";
 	$dbname = "pamphlet";
 	// Create connection
-	$conn = mysql_connect($servername, $username, $password);
-	mysql_select_db($dbname);
+	$conn = mysqli_connect($servername, $username, $password);
+	mysqli_select_db($conn,$dbname);
 	
 	//count claender remindr
 	$count = 0;
@@ -18,13 +18,13 @@
 	$count = 0;
  }else{
 	 //$diff_array['count'] = $count;
-	 $reminderdata = mysql_query("SELECT b.subcatname,b.subcatimage, b.expireDate,a.exp_date,a.adv_name,a.calId FROM
+	 $reminderdata = mysqli_query($conn,"SELECT b.subcatname,b.subcatimage, b.expireDate,a.exp_date,a.adv_name,a.calId FROM
  calendar a, subcategory b WHERE b.expireDate=a.exp_date and a.adv_name=$userLoginId ");
  
   
  //if ($result->num_rows > 0) 
  //{
-     while($row=mysql_fetch_array($reminderdata)) 
+     while($row=mysqli_fetch_array($reminderdata)) 
      {
    $exp_date = $row['exp_date'];
    

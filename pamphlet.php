@@ -9,7 +9,7 @@
 	
     	<div class="row" id="offers">
 		  <?php
-		  while($row=mysql_fetch_array($query)){
+		  while($row=mysqli_fetch_array($query)){
 			 echo '<div class="col-sm-4 col-xs-4 Width320 "  >';
 					echo '<div class="AdOuter" >';
 						//echo '<img  src="data:image/png;base64,'.base64_encode( $row['subcatimage'] ).'"  width="308" height="300"/>';

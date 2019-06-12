@@ -7,13 +7,20 @@
 	$dbname = "pamphlet";
 
 	// Create connection
-	$conn = mysql_connect($servername, $username, $password);
-	mysql_select_db($dbname);
+	//$conn = mysql_connect($servername, $username, $password);
 	
+	$conn = mysqli_connect($servername, $username, $password);
+mysqli_select_db($conn,$dbname);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+//echo "Connected successfully";
+
 	if(isset($_GET['id'])){
-		$id=mysql_real_escape_string($_GET['id']);
-		$query=mysql_query("select * from subcategory where catid='$id'");
-		  while($row=mysql_fetch_assoc($query)){
+		$id=mysqli_real_escape_string($conn,$_GET['id']);
+		$query=mysqli_query($conn,"select * from subcategory where catid='$id'");
+		  while($row=mysqli_fetch_assoc($query)){
          echo '<div class="col-sm-4 col-xs-4 Width320">';
           		echo '<div class="AdOuter">';
 				echo '<img src="data:image/png;base64,'.base64_encode( $row['subcatimage'] ).'"  width="308" height="165" alt=""/>';
@@ -36,7 +43,7 @@
 	if(isset($_GET['ids'])){
 		$favId = $_POST['favid'];
 		$userId = $_POST['userid'];
-		$userinfo=mysql_query("insert into  userinfo values('','$favId','$userId')");
+		$userinfo=mysqli_query($conn,"insert into  userinfo values('','$favId','$userId')");
 		//echo $userinfo;
 	}
 	//user save unique pinnedid item into database
@@ -44,12 +51,12 @@
 		$pinid = $_POST['pinid'];
 		$pinuserid = $_POST['pinuserid'];
 		//echo $pinuserid ;
-		$pinnData=mysql_query("select * from pinnedcat where pincatid=$pinid and pinneduser=$pinuserid");
-		if($row=mysql_fetch_array($pinnData)){
+		$pinnData=mysqli_query($conn,"select * from pinnedcat where pincatid=$pinid and pinneduser=$pinuserid");
+		if($row=mysqli_fetch_array($pinnData)){
 			//echo "record alredy exits";
 		}else{
 			//echo "record not exits";
-			$userPinInfo=mysql_query("insert into  pinnedcat  values('','$pinid','$pinuserid')");
+			$userPinInfo=mysqli_query($conn,"insert into  pinnedcat  values('','$pinid','$pinuserid')");
 		}
 		
 		//echo $userinfo;
@@ -58,17 +65,17 @@
 		$reminderData = $_POST['reminderData'];
 		$userLoginId = $_POST['userLoginId'];
 		//$reminderDatasr=25;
-		$queryCal=mysql_query("SELECT * FROM subcategory where subcatid=$reminderData ");
-		while($row=mysql_fetch_array($queryCal)){
+		$queryCal=mysqli_query($conn,"SELECT * FROM subcategory where subcatid=$reminderData ");
+		while($row=mysqli_fetch_array($queryCal)){
 		//echo $row['subcataddress'];
 			$expdate =  $row['expireDate']; 
 			$userCalInfo=mysql_query("insert into  calendar values('','$expdate','$userLoginId','$reminderData') ");
 		}
 	}
 	//category 
-	$categoryName=mysql_query("SELECT * from category");
+	$categoryName=mysqli_query($conn,"SELECT * from category");
 	//select all subcategory and its for main page
-		$query=mysql_query("SELECT * FROM subcategory ORDER by subcatid DESC");
+		$query=mysqli_query($conn,"SELECT * FROM subcategory ORDER by subcatid DESC");
 		//echo json_encode($query);
 		//echo $query;
 		//select favlist
